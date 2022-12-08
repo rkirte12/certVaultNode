@@ -1,0 +1,133 @@
+definitions:
+  securitySchemes:
+    tokenauth:
+      type: basic
+      description: bearer auth
+      name: Authorization
+      in: header
+    demouser:
+      type: basic
+  #-------------------------------------------------------------------
+  #---------------------------ADMIN----------------------------------
+  #-------------------------------------------------------------------
+  userSignup:
+    required:
+      - email
+      - javaUID
+    properties:
+      email:
+        type: string
+      javaUID:
+        type: number
+
+  verifyOTP:
+    required:
+      - email
+      - otp
+    properties:
+      email:
+        type: string
+      otp:
+        type: string
+
+  resendOTP:
+    required:
+      - email
+    properties:
+      email:
+        type: string
+
+  forgotPassword:
+    required:
+      - email
+    properties:
+      email:
+        type: string
+
+  resetPassword:
+    required:
+      - email
+      - password
+      - confirmPassword
+    properties:
+      email:
+        type: string
+      password:
+        type: string
+      confirmPassword:
+        type: string
+
+        
+  userLogin:
+    required:
+      - email
+      - password
+    properties:
+      email:
+        type: string
+      password: 
+        type: string
+
+  loginAdmin:
+    required:
+      - email
+      - password
+    properties:
+      email:
+        type: string
+      password: 
+        type: string
+          
+
+  socialLogin:
+    required:
+      - socialId
+      - socialType
+      - countryCode
+      - mobileNumber
+      - email
+    properties:
+      socialId:
+        type: string
+      socialType:
+        type: string
+      firstName:
+        type: string
+      lastName:
+        type: string
+      countryCode:
+        type: string
+      mobileNumber:
+        type: string
+      email:
+        type: string
+      deviceToken:
+        type: string
+
+  updateProfile:
+    properties:
+      firstName:
+        type: string
+      lastName:
+        type: string
+      countryCode:
+        type: string
+      mobileNumber:
+        type: string
+      email:
+        type: string
+      deviceToken:
+        type: string
+  
+
+  changePassword:
+    required:
+      - oldPassword
+      - newPassword
+    properties:
+      oldPassword:
+        type: string
+      newPassword: 
+        type: string
+
+  

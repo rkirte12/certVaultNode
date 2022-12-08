@@ -1,0 +1,19 @@
+pipeline {
+     agent {
+         label 'unity'
+     }
+     stages {
+        stage("Build") {
+            steps {
+                sh "npm i"
+               
+            }
+        }
+        stage("Deploy") {
+            steps {
+                sh "sudo pm2 restart appbeez-pune-3025"
+                
+            }
+        }
+    }
+}

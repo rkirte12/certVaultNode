@@ -1,0 +1,45 @@
+{
+  "port": 8080,
+  "hostAddress": "localhost:8080/",
+  "databaseHost": "localhost",
+  "databasePort": "27017",
+  "databaseName": "appbeez-certvalut-node-dev",
+  "fabric":{
+    "ccpPath": "/home/administrator/Desktop/certvault/ANIKET_CLONE/fabric-samples/test-network/organizations/peerOrganizations/org1.example.com/connection-org1.json",
+    "walletPath": "/home/administrator/Desktop/certvault/ANIKET_CLONE/wallet",
+    "channelName" :"mychannel",
+    "chaincodeName" : "basic"
+  },
+ 
+  "jwtsecret": "nodejwt",
+  "jwtresetsecret": "nodejwt",
+  "nodemailer": {
+    "service": "gmail",
+    "user": "mobiloitte.node@gmail.com",
+    "pass": "gflsgcaelxtqjpuz"
+  },
+  "jwtOptions": {
+    "expiresIn": "24h"
+  },
+  "swaggerDefinition": {
+    "info": {
+      "title": "appbeez-certvalut-node-dev",
+      "version": "2.0",
+      "description": "appbeez-certvalut-node-dev API Docs"
+    },
+    "basePath": "/api/v1",
+    "securityDefinitions": {
+      "tokenauth": {
+        "type": "apiKey",
+        "name": "Authorization",
+        "in": "header"
+      }
+    }
+  },
+  "cloudinary": {
+    "cloud_name": "mobiloittetech",
+    "api_key": "917389355349765",
+    "api_secret": "4LHCjazOQnnsjMZKTX5nuG5txRs"
+  },
+  "OTP_TIME_MINUTE": 3
+}
